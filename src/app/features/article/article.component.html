@@ -1,0 +1,8 @@
+<a [routerLink]="['/articles/']">Articles</a>
+
+<h1>ARTICLE</h1>
+<ng-container *ngIf="article$ | async as article">
+  <div>{{article.createdAt}}</div>
+  <h2>{{article.title}}</h2>
+  <markdown>{{article.content}}</markdown>
+</ng-container>
